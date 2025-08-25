@@ -1,6 +1,6 @@
 CREATE TABLE agents(
 
-    id bigint NOT NULL auto_increment,
+    id serial,
     name VARCHAR(100) NOT NULL,
     service_id bigint NOT NULL,
 

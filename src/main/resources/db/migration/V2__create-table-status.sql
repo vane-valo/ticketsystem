@@ -1,6 +1,6 @@
 CREATE TABLE status(
 
-    id bigint NOT NULL auto_increment,
+    id serial,
     name VARCHAR(100) NOT NULL,
 
     PRIMARY KEY(id)
