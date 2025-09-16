@@ -18,4 +18,7 @@ public class Service {
     private Long id;
     private String name;
 
+    @ManyToOne
+    private Agent agent;
+
 }

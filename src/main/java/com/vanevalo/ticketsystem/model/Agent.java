@@ -6,16 +6,20 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Table(name = "users")
-@Entity(name = "User")
+import java.util.List;
+
+@Table(name = "agents")
+@Entity(name = "Agent")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class User {
+public class Agent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String email;
+
+    @OneToMany(mappedBy = "agent")
+    private List<Service> service;
 }
