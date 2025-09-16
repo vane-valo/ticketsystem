@@ -13,6 +13,5 @@ CREATE TABLE tickets(
     PRIMARY KEY(id),
 
     CONSTRAINT fk_tickets_user_id FOREIGN KEY(user_id) REFERENCES users(id),
-    CONSTRAINT fk_tickets_service_id FOREIGN KEY(service_id) REFERENCES services(id),
-    CONSTRAINT fk_tickets_status_id FOREIGN KEY(status_id) REFERENCES status(id)
+    CONSTRAINT fk_tickets_service_id FOREIGN KEY(service_id) REFERENCES services(id)
 );
