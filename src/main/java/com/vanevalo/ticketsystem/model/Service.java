@@ -1,5 +1,6 @@
 package com.vanevalo.ticketsystem.model;
 
+import com.vanevalo.ticketsystem.dto.ServiceDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -21,4 +22,8 @@ public class Service {
     @ManyToOne
     private Agent agent;
 
+    public Service(ServiceDTO serviceDTO) {
+        this.id = null;
+        this.name = serviceDTO.name();
+    }
 }
